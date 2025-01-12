@@ -1,67 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">            
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Order & Delivery</title><style>
-        .aa{
-            background-image: url("images/background_1.jpeg"); 
-            background-size: contain;
-        
+    <title>Food Order & Delivery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #ff5733;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ff7043;
+            padding: 0.8rem 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .menu-item {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .menu-item h3 {
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+            color: #ff5733;
+        }
+
+        .menu-item p {
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        .menu-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .menu-buttons a {
+            background-color: #ff5733;
+            color: white;
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-buttons a:hover {
+            background-color: #e64a19;
+        }
+        .menu-item button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        menu-item button:hover {
+            background-color: #e5533c;
+        }
+        footer {
+            text-align: center;
+            padding: 1.2rem;
+            background-color: #333;
+            color: white;
+            margin-top: 2rem;
         }
     </style>
 </head>
-<body class="aa"style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4;">
-
-    <!-- Header Section -->
-    <header style="background-color: #333; color: white; padding: 20px; text-align: center;">
-        <h1>FoodOrder.com</h1>
-        <p>Your favorite meals delivered right to your doorstep</p>
+<body>
+    <header>
+        <h1>DISH DASH</h1>
+        <p>Your favorite meals, just a click away!</p>
     </header>
 
-    <!-- Navigation Bar -->
-    <nav style="display: flex; justify-content: center; background-color: #444; padding: 10px 0;">
-        <a href="#" style="color: white; text-decoration: none; padding: 15px 20px; margin: 0 10px; font-size: 18px;">Home</a>
-        <a href="./internalcss.html" style="color: white; text-decoration: none; padding: 15px 20px; margin: 0 10px; font-size: 18px;">Menu</a>
-      
-        <a href="./externalcss.html" style="color: white; text-decoration: none; padding: 15px 20px; margin: 0 10px; font-size: 18px;">Contact</a>
-    </nav>
+   
 
-    <!-- Hero Section -->
-    <section style="background-image: url('ps://htt21via.placeholder.com/1600x600'); background-size: cover; background-position: center; height: 400px; display: flex; justify-content: center; align-items: center; color: white; text-align: center;">
-        <div >                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
-            <h1 style="font-size: 50px; color: black;">Order Your Favorite Food Now!</h1>
-            <a href="#" style="background-color: #ff6600; color: white; padding: 15px 30px; font-size: 18px; text-decoration: none; border-radius: 5px; margin-top: 20px;">Order Now</a>
+    <div class="container" id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-buttons">
+            <a href="#veg">Veg</a>
+            <a href="#nonveg">Non-Veg</a>
+            <a href="#desserts">Desserts</a>
+            <a href="#fastfood">Fast Food</a>
+            <a href="#drinks">Drinks</a>
+            <a href="#snacks">Snacks</a>
         </div>
-    </section>
-l
-    <!-- Featured Menu Items -->
-    <section style="display: flex; justify-content: space-around; margin: 50px 0;">
-        <div style=" padding: 20px; text-align: center; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 25%;">
-            <img src="./images/biriyani.jpeg" alt="Pizza" style="width: 100%; border-radius: 8px;">
-            <h3 style="margin-top: 15px; font-size: 24px;">chicken biriyani</h3>
-            <p>Hot and fresh, with your favorite toppings!</p>
-            <a href="#" style="background-color: #ff6600; color: white; padding: 10px 20px; font-size: 16px; text-decoration: none; border-radius: 5px;">Order Now</a>
+        <div class="menu" id="veg">
+            <div class="menu-item">
+                <img src="./images/chickenmasal.jpeg" alt="Paneer Butter Masala">
+                <h3>Chicken masala</h3>
+                <p>spicy and Heady</p>
+            </div>
+            <div class="menu-item">
+                <img src="./images/vegcurry.jpeg" alt="Veg Biryani">
+                <h3>Mix Veg Curry</h3>
+                <p>stay fit and stay healthy</p>
+                        </div>
+            <div class="menu-item">
+                <img src="./images/desserts.jpeg" alt="Aloo Paratha">
+                <h3>Dessert's</h3>
+                <p> 50% off on deserts<br></p>
+            </div>
+            <div class="menu-item">
+                <img src="./natukodi.jpeg" alt="Paneer Butter Masala">
+                <h3>Ragi Sankati Natukodi pulusu</h3>
+                <p>Rich and creamy</p>
+            </div>
+            <div class="menu-item">
+                <img src="./images/butter.jpeg" alt="Paneer Butter Masala">
+                <h3>Paneer Butter Masala</h3>
+                <p>Rich and creamy</p>
+            </div>
+            <div class="menu-item">
+                <img src="./smooth.jpeg" alt="Mix Veg Curry">
+                <h3>Smoothie's</h3>
+                <p>healthy smoothies</p>
+            </div>
         </div>
-        <div style="background-color: white; padding: 20px; text-align: center; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 25%;">
-            <img src="./images/noodles.jpeg" alt="Burger" style="width: 100%; border-radius: 8px;">
-            <h3 style="margin-top: 15px; font-size: 24px;">noodels</h3>
-            <p>long and juicy</p>
-            <a href="#" style="background-color: #ff6600; color: white; padding: 10px 20px; font-size: 16px; text-decoration: none; border-radius: 5px;">Order Now</a>
-        </div>
-        <div style="background-color: white; padding: 20px; text-align: center; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 25%;">
-            <img src="./Peppy-Chicken-Roll_1.jpg" alt="Sushi" style="width: 100%; border-radius: 8px;">
-            <h3 style="margin-top: 15px; font-size: 24px;">chicken Rolls</h3>
-            <p>tasty curnchy rolls.</p>
-            <a href="#" style="background-color: #ff6600; color: white; padding: 10px 20px; font-size: 16px; text-decoration: none; border-radius: 5px;">Order Now</a>
-        </div>
-    </section>
+    </div>
 
-    <!-- Footer Section -->
-    <footer style="background-color: #333; color: white; padding: 20px; text-align: center;">
-        <p>&copy; 2025 FoodOrder.com. All rights reserved.</p>
-        <p>123 Food Street, City, Country | Tel: (123) 456-7890</p>
+    <footer>
+        <p>&copy; 2025 Food Order & Delivery. All rights reserved.</p>
     </footer>
-
 </body>
 </html>
